@@ -2,10 +2,10 @@
 #include "process.h"
 #include "scheduler.h"
 #include <stdlib.h>
-//#include <signal.h>
+#include <signal.h>
 #include <stdio.h>
 //#include <unistd.h>
-//#include <sys/wait.h> // wait, waitpid
+#include <sys/wait.h> // wait, waitpid
 #include <sched.h>
 
 /* Last context switch time for RR scheduling */
@@ -85,7 +85,7 @@ int scheduling(struct process *proc, int nproc, int policy)
 
 	/* Set single core prevent from preemption */
 	// getpid(): 用来取得目前进程的进程识别码，许多程序利用取到的此值来建立临时文件， 以避免临时文件相同带来的问题。
-	//proc_assign_cpu(getpid(), PARENT_CPU); 
+	proc_assign_cpu(getpid(), 0); 
 
 
 	/* Set high priority to scheduler */
@@ -119,35 +119,39 @@ int scheduling(struct process *proc, int nproc, int policy)
 		}
 
 		/* Check if process ready and execute */
-		for (int i = 0; i < nproc; i++) {
+        for (int i = 0; i < nproc; i++) {
 			if (proc[i].t_ready == ntime) {
-				proc[i].pid = proc_exec(proc[i]); 		
-				proc_block(proc[i].pid);
+				proc[i].pid = proc_exec(proc[i]);
+				//proc_block(proc[i].pid);
 #ifdef DEBUG
 				fprintf(stderr, "%s ready at time %d.\n", proc[i].name, ntime);
 #endif
 			}
-
+ 
 		}
-
 		/* Select next running process */
-		int next = next_process(proc, nproc, policy); 	// 得到下一個時間點能跑的 process 的編號
+   	    	
+        int next = next_process(proc, nproc, policy); 	// 得到下一個時間點能跑的 process 的編號
 		if (next != -1) {
-			/* Context switch */
+			// Context switch 
 			if (running != next) { 						// 如果上下兩個時間點對應到的 process 不一樣的話
-				proc_wakeup(proc[next].pid);
-				proc_block(proc[running].pid);
+				//proc_wakeup(proc[next].pid);
+				//proc_block(proc[running].pid);
 				last_running = next;
 				running = next;
 				t_last = ntime;
 			}
 		}
 
-		/* Run an unit of time */
-		UNIT_T();
-		if (running != -1) 								// 如果有人在跑，那這個人可以分配到執行一個單位的時間
+		// Run an unit of time 
+		if (running != -1){								// 如果有人在跑，那這個人可以分配到執行一個單位的時間
 			proc[running].t_exec--;
+            //printf ("%d is running in main\n",proc[running].pid);
+            kill(proc[running].pid,SIGCONT);
+            waitpid(proc[running].pid,0,WUNTRACED);
+        }
 		ntime++;
+        
 	}
 
 	return 0;

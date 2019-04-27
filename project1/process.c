@@ -8,9 +8,10 @@
 #include <sys/types.h>
 #include <sys/syscall.h>
 #include <time.h>
+#include<signal.h>
 //#define GET_TIME 314
-//#define PRINTK 315
-
+#define PRINTK 333
+#define BILLION 1E9
 int proc_assign_cpu(int pid, int core)
 {
 	if (core > sizeof(cpu_set_t)) {
@@ -32,7 +33,8 @@ int proc_assign_cpu(int pid, int core)
 
 int proc_exec(struct process proc) // struct: process is defined in process.h
 {
-	int pid = fork();
+	int pid_parent = getpid();
+    int pid = fork();
 
 	if (pid < 0) {
 		perror("Error pid < 0");
@@ -56,23 +58,36 @@ int proc_exec(struct process proc) // struct: process is defined in process.h
 			syscall(PRINTK, msg_to_printk);
 			exit(0);
 			*/
-
+            
+            proc_assign_cpu(0, CHILD_CPU);
 			//For Test
-			
-			clock_t s_time, e_time;
-			s_time = clock();
-			for(int i = 0; i < proc.t_exec; ++i){
-				UNIT_T();
+			char to_dmesg[200];
+            struct timespec s_time, e_time;
+            unsigned long s_t,e_t;
+            //printf("%d is stop by SIGSTOP\n",getpid()); 
+           
+            kill(getpid(),SIGSTOP);
+            clock_gettime(CLOCK_REALTIME,&s_time);
+            for(int i = 0; i < proc.t_exec; ++i){
+                //kill(pid_parent,SIGCONT);
+                //printf("%d is stop by SIGSTOP\n",getpid()); 
+                UNIT_T();
+                if (i!=proc.t_exec-1)
+                    kill(getpid(),SIGSTOP);
 			}
-			e_time = clock();
-			printf("[project1] %d %lu %lu\n", getpid(), s_time, e_time);
+            clock_gettime(CLOCK_REALTIME,&e_time);
+			sprintf(to_dmesg, "[project1] %d %lu.%09lu %lu.%09lu\n", getpid(), s_time.tv_sec, s_time.tv_nsec, e_time.tv_sec, e_time.tv_nsec);
+            //sprintf(to_dmesg,"[project1] %d %lu %lu\n", getpid(), s_t, e_t);
+			printf("[project1] %d %lu.%09lu %lu.%09lu\n", getpid(), s_time.tv_sec, s_time.tv_nsec, e_time.tv_sec, e_time.tv_nsec);
+		    syscall(PRINTK,to_dmesg);	
 			exit(0);
 	}
-
 	/* Assign child to another core prevent from interupted by parant *///
-	//proc_assign_cpu(pid, CHILD_CPU);
-	
-	return pid;
+	else
+    {
+       waitpid(pid,0,WUNTRACED);
+    }
+    return pid;
 }
 
 int proc_block(int pid)
