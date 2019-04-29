@@ -24,12 +24,12 @@ struct process {
 int proc_assign_cpu(int pid, int core);
 
 /* Execute the process and return pid */
-int proc_exec(struct process proc);
+int proc_exec(struct process proc, pid_t parent_pid);
 
 /* Set very low priority tp process */
 int proc_block(int pid);
 
 /* Set high priority to process */
-int proc_wakeup(int pid);
+int proc_wakeup(int pid, int priority);
 
 #endif

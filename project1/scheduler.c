@@ -37,11 +37,13 @@ int next_process(struct process *proc, int nproc, int policy)
 
 	if (policy == PSJF || policy ==  SJF) {
 		for (int i = 0; i < nproc; i++) {
+			//printf("%d ", proc[i].t_exec);
 			if (proc[i].pid == -1 || proc[i].t_exec == 0) 			// 如果這個 process 已經跑完了就不考慮他
 				continue;
 			if (ret == -1 || proc[i].t_exec < proc[ret].t_exec) 	// 從沒跑完的中，去挑一個目前為止剩下的執行時間最短的，而且只挑一次（挑過的話 ret != -1)
 				ret = i;
 		}
+		//printf("\n");
 	}
 
 	else if (policy == FIFO) { 										// 在 FIFO，剛好遇到前一個人跑完
@@ -62,10 +64,17 @@ int next_process(struct process *proc, int nproc, int policy)
 				}
 			}
 		}
-		else if ((ntime - t_last) % 20 == 0 || (running == -1 && last_running != -1))  { 					// 每個 process 分到 500 就要換人
-			ret = (last_running + 1) % nproc; 							// 換的方式就是找編號是下一個的
-			while (proc[ret].pid == -1 || proc[ret].t_exec == 0) 	// 如果編號下一個人跑完了，就再往下找一個
+		else if ((ntime - t_last) % 500 == 0 || (running == -1 && last_running != -1))  { 					// 每個 process 分到 500 就要換人
+			ret = (last_running + 1) % nproc; 
+			int cnt = 0;							// 換的方式就是找編號是下一個的
+			while (proc[ret].pid == -1 || proc[ret].t_exec == 0){ 	// 如果編號下一個人跑完了，就再往下找一個
 				ret = (ret + 1) % nproc;
+				cnt++;
+				if(cnt==nproc){
+					ret = -1;
+					break;				
+				}
+			}
 		}
 		else
 			ret = running; 		
@@ -89,7 +98,7 @@ int scheduling(struct process *proc, int nproc, int policy)
 
 
 	/* Set high priority to scheduler */
-	proc_wakeup(getpid());
+	proc_wakeup(getpid(), 2);
 	
 	/* Initial scheduler */
 	ntime = 0;
@@ -104,7 +113,7 @@ int scheduling(struct process *proc, int nproc, int policy)
 		if (running != -1 && proc[running].t_exec == 0) { 		// 如果有人在跑，而且這個人剛好跑完了
 		
 
-			fprintf(stderr, "%s finish at time %d.\n", proc[running].name, ntime);
+			//fprintf(stderr, "%s finish at time %d.\n", proc[running].name, ntime);
 
 			//kill(running, SIGKILL);
 			waitpid(proc[running].pid, NULL, 0); 				// waitpid()会暂时停止目前进程的执行, 直到有信号来到或子进程结束. 
@@ -121,22 +130,27 @@ int scheduling(struct process *proc, int nproc, int policy)
 		/* Check if process ready and execute */
 		for (int i = 0; i < nproc; i++) {
 			if (proc[i].t_ready == ntime) {
-				proc[i].pid = proc_exec(proc[i]); 		
-				proc_block(proc[i].pid);
-#ifdef DEBUG
-				fprintf(stderr, "%s ready at time %d.\n", proc[i].name, ntime);
-#endif
+				proc[i].pid = proc_exec(proc[i], getpid()); 		
+				//proc_block(proc[i].pid);
+//#ifdef DEBUG
+				//fprintf(stderr, "%s ready at time %d.\n", proc[i].name, ntime);
+//#endif
 			}
 
 		}
 
 		/* Select next running process */
 		int next = next_process(proc, nproc, policy); 	// 得到下一個時間點能跑的 process 的編號
+		//printf("%d\n", next);
 		if (next != -1) {
+			proc_wakeup(proc[next].pid, 2);
+			proc_block(getpid());
 			/* Context switch */
 			if (running != next) { 						// 如果上下兩個時間點對應到的 process 不一樣的話
-				proc_wakeup(proc[next].pid);
-				proc_block(proc[running].pid);
+				//printf("context %d, %d\n", running, next);				
+				//proc_block(proc[running].pid);
+				//proc_wakeup(proc[next].pid, 2);
+				//proc_block(proc[running].pid);
 				last_running = next;
 				running = next;
 				t_last = ntime;
