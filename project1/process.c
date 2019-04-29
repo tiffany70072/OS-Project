@@ -43,8 +43,8 @@ int proc_exec(struct process proc, pid_t parent_pid) // struct: process is defin
 	if(pid == 0){
 			// w/ syscall
 			long s_time, s_ntime, e_time, e_ntime;
+			proc_block(getpid());
 			syscall(GET_TIME, &s_time, &s_ntime);
-			proc_block(getpid());		
 			// 執行 proc.t_exec 個unit time
 			for(int i = 0; i < proc.t_exec; ++i){
 				
