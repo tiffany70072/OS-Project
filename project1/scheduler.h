@@ -3,15 +3,15 @@
 
 #include "process.h"
 
-#define FIFO	1
-#define RR	2
-#define SJF	3
-#define PSJF	4
+#define POLICY_FIFO 1
+#define POLICY_RR   2
+#define POLICY_SJF  3
+#define POLICY_PSJF 4
 
-/* Return next process to run */
-int next_process(struct process *proc, int nproc, int policy);
+// Return index of next process
+int NextProcess(struct process *proc, int procNum, int policy);
 
-/* Running scheduler */
-int scheduling(struct process *proc, int nproc, int policy);
+// Running scheduler
+int Scheduling(struct process *proc, int procNum, int policy);
 
 #endif

@@ -1,44 +1,33 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-//#include <sched.h>
-//#include <errno.h>
-//#include <unistd.h>
+#include <string.h>
 #include "process.h"
 #include "scheduler.h"
 
 int main(int argc, char* argv[]){
+	char policy[256];  // policy, ex: FIFO
+	int procNum;       // process number, ex: 3
+	scanf("%s%d", policy, &procNum); 	    
+	//printf("%s %d\n", policy, procNum);
 	
-	char sched_policy[256];
-	int policy;
-	int nproc;
 	struct process *proc;
+	proc = (struct process *)malloc(procNum * sizeof(struct process));
 
-	scanf("%s", sched_policy); 	// ex: FIFO
-	scanf("%d", &nproc); 		// 有多少 process 要跑, ex: 3
-	//printf("%d %d\n", nproc, policy);
-	
-	proc = (struct process *)malloc(nproc * sizeof(struct process));
-
-	for (int i = 0; i < nproc; i++) {
-		scanf("%s%d%d", proc[i].name,
-			&proc[i].t_ready, &proc[i].t_exec); // P1, 1, 10
+	for (int i = 0; i < procNum; i++) {
+		scanf("%s%d%d", proc[i].name, &proc[i].timeReady, &proc[i].timeExec); // P1, 1, 10
 	}
 
-	if (strcmp(sched_policy, "FIFO") == 0) {
-		policy = FIFO;
-	} else if (strcmp(sched_policy, "RR") == 0) {
-		policy = RR;
-	} else if (strcmp(sched_policy, "SJF") == 0) {
-		policy = SJF;
-	} else if (strcmp(sched_policy, "PSJF") == 0) {
-		policy = PSJF;
+	if (strcmp(policy, "FIFO") == 0) {
+		Scheduling(proc, procNum, POLICY_FIFO);
+	} else if (strcmp(policy, "RR") == 0) {
+		Scheduling(proc, procNum, POLICY_RR);
+	} else if (strcmp(policy, "SJF") == 0) {
+		Scheduling(proc, procNum, POLICY_SJF);
+	} else if (strcmp(policy, "PSJF") == 0) {
+		Scheduling(proc, procNum, POLICY_PSJF);
 	} else {
-		fprintf(stderr, "Invalid policy: %s", sched_policy);
-		exit(0);
+		fprintf(stderr, "Invalid policy: %s", policy);
 	}
 
-	scheduling(proc, nproc, policy);
-
-	exit(0);
+	return 0;
 }
