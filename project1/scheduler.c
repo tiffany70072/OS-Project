@@ -111,7 +111,7 @@ int Scheduling(struct process *proc, int procNum, int policy){
 	lastRunning   = -1;
 	procFinishCnt = 0;  // 一開始完成的 process 數目是零
 	
-	while(true) {
+	while(1) {
 		//fprintf(stderr, "Current time: %d\n", timeNow);
 
 		////////////////////////////////////////
@@ -119,7 +119,7 @@ int Scheduling(struct process *proc, int procNum, int policy){
 		////////////////////////////////////////
 
 		// 如果有人在跑，而且這個人剛好跑完了
-		if (curRunning != -1 && proc[curRunning].t_exec == 0) {
+		if (curRunning != -1 && proc[curRunning].timeExec == 0) {
 			// waitpid()会暂时停止目前进程的执行, 直到有信号来到或子进程结束. 
 			waitpid(proc[curRunning].pid, NULL, 0);
 			printf("%s %d\n", proc[curRunning].name, proc[curRunning].pid);
