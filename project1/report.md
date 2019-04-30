@@ -1,5 +1,35 @@
 ## 1. 設計
+### 1.1. main.c
+* 根據input資料決定schedule policy
+* 根據input資料決定有多少process要跑
+* 依照schedule policy呼叫schedule.c不同的排程方法
 
+### 1.2. process.c
+* `#define UNIT_T()`: Define running one unit time
+* `int proc_assign_cpu(int pid, int core)`: Assign process to specific core
+* `int proc_exec(struct process proc, pid_t parent_pid)`: Execute the process and return pid
+* `int proc_block(int pid)`: Set very low priority tp process
+* `int proc_wakeup(int pid, int priority)`: Set high priority to process
+
+### 1.3. schedule.c
+* `int next_process(struct process *proc, int nproc, int policy)`: Return next process to run
+    1. Non-preemptive: 對於 SJF and FIFO，只要有人正在跑，就讓他繼續跑，直接回傳正在跑的人的編號
+    2. PSJF || SJF: 如果這個 process 已經跑完了就不考慮他，從沒跑完的中，去挑一個目前為止剩下的執行時間最短的，而且只挑一次（挑過的話 ret != -1）
+    3. FIFO: 在FIFO，剛好遇到前一個人跑完，從全部沒跑完的檢查一遍，找出 t_ready 最小的（最早到的）
+    4. RR
+        * 如果沒人在跑，找還沒跑完 (t_exec > 0)，且準備好要跑的人的最小的，這應該是初始
+        * 每個 process 分到 500 就要換人，換的方式就是找編號是下一個的，如果編號下一個人跑完了，就再往下找一個
+* `int scheduling(struct process *proc, int nproc, int policy)`: Running scheduler
+    1. 利用 t_ready 來排序
+    2. 初始化所有 process 的 pid = -1
+    3. Set high priority to scheduler
+    4. Initial scheduler
+    5. while(1) {
+        1. Check if running process finish
+        2. Check if process ready and execute
+        3. Select next running process
+        4. Run an unit of time
+        }
 
 ## 2. 執行範例測資的結果
 ### 2.1. FIFO
