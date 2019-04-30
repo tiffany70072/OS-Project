@@ -16,7 +16,7 @@ int main(int argc, char* argv[]){
 
 	scanf("%s", sched_policy); 	// ex: FIFO
 	scanf("%d", &nproc); 		// 有多少 process 要跑, ex: 3
-	printf("%d %d\n", nproc, policy);
+	//printf("%d %d\n", nproc, policy);
 	
 	proc = (struct process *)malloc(nproc * sizeof(struct process));
 

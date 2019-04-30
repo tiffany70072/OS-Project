@@ -79,6 +79,7 @@ int next_process(struct process *proc, int nproc, int policy)
 		else
 			ret = running; 		
 	}
+
 	return ret;
 }
 
@@ -98,7 +99,7 @@ int scheduling(struct process *proc, int nproc, int policy)
 
 
 	/* Set high priority to scheduler */
-	proc_wakeup(getpid(), 2);
+	proc_wakeup(getpid(), 10);
 	
 	/* Initial scheduler */
 	ntime = 0;
@@ -113,7 +114,6 @@ int scheduling(struct process *proc, int nproc, int policy)
 		if (running != -1 && proc[running].t_exec == 0) { 		// 如果有人在跑，而且這個人剛好跑完了
 		
 
-			//fprintf(stderr, "%s finish at time %d.\n", proc[running].name, ntime);
 
 			//kill(running, SIGKILL);
 			waitpid(proc[running].pid, NULL, 0); 				// waitpid()会暂时停止目前进程的执行, 直到有信号来到或子进程结束. 
@@ -132,13 +132,11 @@ int scheduling(struct process *proc, int nproc, int policy)
 			if (proc[i].t_ready == ntime) {
 				proc[i].pid = proc_exec(proc[i], getpid()); 		
 				//proc_block(proc[i].pid);
-//#ifdef DEBUG
-				//fprintf(stderr, "%s ready at time %d.\n", proc[i].name, ntime);
-//#endif
+
 			}
 
 		}
-
+		//printf("start over\n");
 		/* Select next running process */
 		int next = next_process(proc, nproc, policy); 	// 得到下一個時間點能跑的 process 的編號
 		//printf("%d\n", next);
