@@ -43,13 +43,16 @@ int proc_exec(struct process proc, pid_t parent_pid) // struct: process is defin
 	if(pid == 0){
 			// w/ syscall
 			long s_time, s_ntime, e_time, e_ntime;
+			//printf("block : %d\n",getpid());
 			proc_block(getpid());
+			//printf("awake : %d\n",getpid());
 			syscall(GET_TIME, &s_time, &s_ntime);
+			//proc_block(getpid());		
 			// 執行 proc.t_exec 個unit time
 			for(int i = 0; i < proc.t_exec; ++i){
 				
 				//UNIT_T();
-				proc_wakeup(parent_pid, 2);
+				proc_wakeup(parent_pid, 10);
 				if( i != proc.t_exec-1){				
 					proc_block(getpid());	
 				}
