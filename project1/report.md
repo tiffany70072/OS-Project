@@ -266,3 +266,11 @@ P5 200 7000
 
 ## 3. 比較實際結果與理論結果，並解釋造成差異的原因
 ## 4. 各組員的貢獻
+| 學號 | 姓名 | 負責工作 |
+| -------- | -------- | -------- |
+| r07922059 | 陳毅 | User program |
+| r07922035 | 李漪莛 | User program |
+| r07922135 | 顏百謙 | User program |
+| r07922119 | 吳達懿 | Syscall printk, synchronize process |
+| r06922002 | 姚嘉昇 | Syscall getnstimeofday, report |
+| r07922117 | 黃榆珊 | Syscall getnstimeofday, report |
