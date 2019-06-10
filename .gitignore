@@ -56,3 +56,7 @@ dkms.conf
 */*.ko
 */*.obj
 */*.elf
+
+# Project 2
+*/*.in
+*/*.out

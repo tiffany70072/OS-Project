@@ -4,8 +4,17 @@ then
 else
 	method=m
 fi
+
 for FILE in `find ./data -name *_in`
 do
-    sudo ./user_program/master $FILE $method &
+	echo $FILE
+	sudo ./user_program/master $FILE $method &
+	sudo ./user_program/slave $FILE.out $method 127.0.0.1
+done
+
+for FILE in `find ./data -name *.in`
+do
+	echo $FILE
+	sudo ./user_program/master $FILE $method &
 	sudo ./user_program/slave $FILE.out $method 127.0.0.1
 done
