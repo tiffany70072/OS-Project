@@ -1,0 +1,92 @@
+./data/file1_in
+ioctl success
+Master transmission time: 0.255500 ms, File size: 4 bytes with method m
+0.255500, 4, m
+./data/file2_in
+ioctl success
+Master transmission time: 0.116100 ms, File size: 597 bytes with method m
+0.116100, 597, m
+./data/file3_in
+ioctl success
+Master transmission time: 0.251700 ms, File size: 10037 bytes with method m
+0.251700, 10037, m
+./data/file4_in
+ioctl success
+./data/1.in
+ioctl success
+Master transmission time: 0.060300 ms, File size: 125 bytes with method m
+0.060300, 125, m
+./data/10.in
+ioctl success
+Master transmission time: 0.162400 ms, File size: 1250 bytes with method m
+0.162400, 1250, m
+./data/100.in
+ioctl success
+Master transmission time: 0.318600 ms, File size: 12500 bytes with method m
+0.318600, 12500, m
+./data/1000.in
+ioctl success
+Master transmission time: 1.919700 ms, File size: 125000 bytes with method m
+1.919700, 125000, m
+./data/10000.in
+ioctl success
+./data/100000.in
+ioctl success
+./data/2.in
+ioctl success
+Master transmission time: 0.144300 ms, File size: 250 bytes with method m
+0.144300, 250, m
+./data/20.in
+ioctl success
+Master transmission time: 0.223100 ms, File size: 2500 bytes with method m
+0.223100, 2500, m
+./data/200.in
+ioctl success
+Master transmission time: 0.677800 ms, File size: 25000 bytes with method m
+0.677800, 25000, m
+./data/2000.in
+ioctl success
+Master transmission time: 3.447200 ms, File size: 250000 bytes with method m
+3.447200, 250000, m
+./data/20000.in
+ioctl success
+./data/200000.in
+ioctl success
+./data/4.in
+ioctl success
+Master transmission time: 0.288000 ms, File size: 500 bytes with method m
+0.288000, 500, m
+./data/40.in
+ioctl success
+Master transmission time: 0.199100 ms, File size: 5000 bytes with method m
+0.199100, 5000, m
+./data/400.in
+ioctl success
+Master transmission time: 0.928000 ms, File size: 50000 bytes with method m
+0.928000, 50000, m
+./data/4000.in
+ioctl success
+Master transmission time: 9.040200 ms, File size: 500000 bytes with method m
+9.040200, 500000, m
+./data/40000.in
+ioctl success
+./data/400000.in
+ioctl success
+./data/8.in
+ioctl success
+Master transmission time: 0.100400 ms, File size: 1000 bytes with method m
+0.100400, 1000, m
+./data/80.in
+ioctl success
+Master transmission time: 0.294300 ms, File size: 10000 bytes with method m
+0.294300, 10000, m
+./data/800.in
+ioctl success
+Master transmission time: 1.580800 ms, File size: 100000 bytes with method m
+1.580800, 100000, m
+./data/8000.in
+ioctl success
+./data/80000.in
+ioctl success
+./data/800000.in
+ioctl success
