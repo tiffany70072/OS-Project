@@ -19,7 +19,7 @@
 
 #### Slave
 * 由於slave端事先不知道檔案大小，因此映射時需要先開啟一給定的大小（通常是 page size 的整數倍)，如果滿了就在開新的，直到檔案傳完為止
-* 但檔案本身原本是空的，如果直接把開啟的檔案拿來映射，會導致 bus error。因此每次要開新的映射位址時，需要先在該檔案的對應 offset 位置寫入一個 null character。並於檔案傳送完畢後將多出來的 offset truncate掉
+* 但檔案本身原本是空的，如果直接把開啟的檔案拿來映射，會導致 bus error。因此每次要開新的映射位址時，需要先在該檔案的對應 offset 位置寫入一個 null character。並於檔案傳送完畢後將多出來的 offset truncate 掉
 * 需要設定 IP 位址
 * 需要配合 2 個 kernel functions
 
@@ -30,7 +30,7 @@
 |0x12345679|slave_IOCTL_EXIT|exit the socket
 
 #### Structure
-![](https://github.com/tiffany70072/OS-Project/blob/master/project2/graph/structure.png?raw=true =450x340)
+![](https://github.com/tiffany70072/OS-Project/blob/master/project2/graph/structure.png?raw=true)
 
 
 ### 程式架構
