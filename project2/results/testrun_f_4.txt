@@ -1,0 +1,72 @@
+../data/file1_in
+Master Transmission time: 0.070000 ms, File size: 4 bytes
+Slave Transmission time: 0.025200 ms, File size: 4 bytes
+[  304.874789]  do_syscall_64+0x73/0x130
+[  304.874791]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[  304.874792] RIP: 0033:0x7fc1c56fff47
+[  304.874793] RSP: 002b:00007fff1a9408d8 EFLAGS: 00000206 ORIG_RAX: 0000000000000010
+[  304.874794] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007fc1c56fff47
+[  304.874794] RDX: 00007fff1a940830 RSI: 0000000012345677 RDI: 0000000000000003
+[  304.874795] RBP: 00007fff1a940be0 R08: 0000000000000002 R09: 00007fff1a940950
+[  304.874796] R10: 000000000000053f R11: 0000000000000206 R12: 0000000000400860
+[  304.874796] R13: 00007fff1a940cc0 R14: 0000000000000000 R15: 0000000000000000
+[  304.874797] Code: ff 8b 05 80 21 d8 00 65 8b 35 d9 b4 92 55 f7 d0 21 d0 23 11 09 f0 48 8d 14 91 3b 42 40 0f 84 22 ff ff ff 89 42 40 e9 1a ff ff ff <0f> 0b e9 31 ff ff ff 0f 0b e9 1e ff ff ff e8 e9 a2 7a ff 66 0f 
+[  304.874820] ---[ end trace 2a173bd8444c4439 ]---
+[  304.874821] aceept sockfd_cli = 0x0000000014ac818f
+[  304.874822] got connected from : 127.0.0.1 33668
+[  304.874887] slave device ioctl
+[  304.874888] slave: F000FF53F000FF53
+../data/file3_in
+Master Transmission time: 0.060800 ms, File size: 9695 bytes
+Slave Transmission time: 0.059800 ms, File size: 9695 bytes
+[  304.886295]  do_syscall_64+0x73/0x130
+[  304.886296]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[  304.886297] RIP: 0033:0x7ff80dd30f47
+[  304.886298] RSP: 002b:00007fffe8d461e8 EFLAGS: 00000206 ORIG_RAX: 0000000000000010
+[  304.886299] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007ff80dd30f47
+[  304.886299] RDX: 00007fffe8d46140 RSI: 0000000012345677 RDI: 0000000000000003
+[  304.886300] RBP: 00007fffe8d464f0 R08: 0000000000000002 R09: 00007fffe8d46260
+[  304.886300] R10: 000000000000053f R11: 0000000000000206 R12: 0000000000400860
+[  304.886301] R13: 00007fffe8d465d0 R14: 0000000000000000 R15: 0000000000000000
+[  304.886302] Code: ff 8b 05 80 21 d8 00 65 8b 35 d9 b4 92 55 f7 d0 21 d0 23 11 09 f0 48 8d 14 91 3b 42 40 0f 84 22 ff ff ff 89 42 40 e9 1a ff ff ff <0f> 0b e9 31 ff ff ff 0f 0b e9 1e ff ff ff e8 e9 a2 7a ff 66 0f 
+[  304.886323] ---[ end trace 2a173bd8444c443a ]---
+[  304.886324] aceept sockfd_cli = 0x000000005923f36e
+[  304.886326] got connected from : 127.0.0.1 33670
+[  304.886756] slave device ioctl
+[  304.886757] slave: F000FF53F000FF53
+../data/file4_in
+Master Transmission time: 3.315300 ms, File size: 1502860 bytes
+Slave Transmission time: 5.473600 ms, File size: 1502860 bytes
+[  304.899538]  do_syscall_64+0x73/0x130
+[  304.899539]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[  304.899540] RIP: 0033:0x7fc1ee95ef47
+[  304.899541] RSP: 002b:00007fff7aecdc38 EFLAGS: 00000202 ORIG_RAX: 0000000000000010
+[  304.899542] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007fc1ee95ef47
+[  304.899542] RDX: 00007fff7aecdb90 RSI: 0000000012345677 RDI: 0000000000000003
+[  304.899543] RBP: 00007fff7aecdf40 R08: 0000000000000002 R09: 00007fff7aecdcb0
+[  304.899544] R10: 000000000000053f R11: 0000000000000202 R12: 0000000000400860
+[  304.899544] R13: 00007fff7aece020 R14: 0000000000000000 R15: 0000000000000000
+[  304.899545] Code: ff 8b 05 80 21 d8 00 65 8b 35 d9 b4 92 55 f7 d0 21 d0 23 11 09 f0 48 8d 14 91 3b 42 40 0f 84 22 ff ff ff 89 42 40 e9 1a ff ff ff <0f> 0b e9 31 ff ff ff 0f 0b e9 1e ff ff ff e8 e9 a2 7a ff 66 0f 
+[  304.899566] ---[ end trace 2a173bd8444c443b ]---
+[  304.899567] aceept sockfd_cli = 0x00000000a471f88a
+[  304.899569] got connected from : 127.0.0.1 33672
+[  304.952997] slave device ioctl
+[  304.952999] slave: F000FF53F000FF53
+../data/file2_in
+Master Transmission time: 0.015000 ms, File size: 577 bytes
+Slave Transmission time: 0.172400 ms, File size: 577 bytes
+[  304.968309]  do_syscall_64+0x73/0x130
+[  304.968310]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[  304.968311] RIP: 0033:0x7f2e2682ef47
+[  304.968312] RSP: 002b:00007fff2bfecd88 EFLAGS: 00000206 ORIG_RAX: 0000000000000010
+[  304.968313] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007f2e2682ef47
+[  304.968313] RDX: 00007fff2bfecce0 RSI: 0000000012345677 RDI: 0000000000000003
+[  304.968314] RBP: 00007fff2bfed090 R08: 0000000000000002 R09: 00007fff2bfece00
+[  304.968315] R10: 000000000000053f R11: 0000000000000206 R12: 0000000000400860
+[  304.968315] R13: 00007fff2bfed170 R14: 0000000000000000 R15: 0000000000000000
+[  304.968316] Code: ff 8b 05 80 21 d8 00 65 8b 35 d9 b4 92 55 f7 d0 21 d0 23 11 09 f0 48 8d 14 91 3b 42 40 0f 84 22 ff ff ff 89 42 40 e9 1a ff ff ff <0f> 0b e9 31 ff ff ff 0f 0b e9 1e ff ff ff e8 e9 a2 7a ff 66 0f 
+[  304.968337] ---[ end trace 2a173bd8444c443c ]---
+[  304.968338] aceept sockfd_cli = 0x00000000f959d14c
+[  304.968339] got connected from : 127.0.0.1 33674
+[  304.968413] slave device ioctl
+[  304.968414] slave: F000FF53F000FF53

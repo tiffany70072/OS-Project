@@ -1,0 +1,72 @@
+../data/file1_in
+Master Transmission time: 0.022500 ms, File size: 4 bytes
+Slave Transmission time: 0.024000 ms, File size: 4 bytes
+[  322.843704] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007fe555115f47
+[  322.843705] RDX: 00007fffc070bca0 RSI: 0000000012345677 RDI: 0000000000000003
+[  322.843706] RBP: 00007fffc070c050 R08: 0000000000000002 R09: 00007fffc070bdc0
+[  322.843706] R10: 000000000000053f R11: 0000000000000206 R12: 0000000000400860
+[  322.843707] R13: 00007fffc070c130 R14: 0000000000000000 R15: 0000000000000000
+[  322.843708] Code: ff 8b 05 80 21 d8 00 65 8b 35 d9 b4 92 55 f7 d0 21 d0 23 11 09 f0 48 8d 14 91 3b 42 40 0f 84 22 ff ff ff 89 42 40 e9 1a ff ff ff <0f> 0b e9 31 ff ff ff 0f 0b e9 1e ff ff ff e8 e9 a2 7a ff 66 0f 
+[  322.843730] ---[ end trace 2a173bd8444c444d ]---
+[  322.843731] aceept sockfd_cli = 0x0000000058450377
+[  322.843732] got connected from : 127.0.0.1 33708
+[  322.843758] master: 80000007B3C51025
+[  322.843792] slave device ioctl
+[  322.843793] slave: 80000007B8C8F867
+[  322.843797] slave device ioctl
+[  322.843798] slave device ioctl
+[  322.843799] slave: F000FF53F000FF53
+../data/file3_in
+Master Transmission time: 0.026900 ms, File size: 9695 bytes
+Slave Transmission time: 0.076600 ms, File size: 9695 bytes
+[  322.872443] slave: 80000007B48CF867
+[  322.872443] slave device ioctl
+[  322.872444] slave: 80000007B48CC867
+[  322.872444] slave device ioctl
+[  322.872444] slave: 80000007B55EB867
+[  322.872448] slave device ioctl
+[  322.872470] slave device ioctl
+[  322.872471] slave: 80000007B5636867
+[  322.872471] slave device ioctl
+[  322.872472] slave: 80000007B5637867
+[  322.872472] slave device ioctl
+[  322.872473] slave: 80000007B5630867
+[  322.872476] slave device ioctl
+[  322.872477] slave device ioctl
+[  322.872478] slave: F000FF53F000FF53
+../data/file4_in
+Master Transmission time: 2.546800 ms, File size: 1502860 bytes
+Slave Transmission time: 4.667200 ms, File size: 1502860 bytes
+[  322.946691] slave: 80000007B1082867
+[  322.946692] slave device ioctl
+[  322.946692] slave: 80000007B1083867
+[  322.946696] slave device ioctl
+[  322.946719] slave device ioctl
+[  322.946719] slave: 80000007B1084867
+[  322.946720] slave device ioctl
+[  322.946720] slave: 80000007B1085867
+[  322.946721] slave device ioctl
+[  322.946721] slave: 80000007B1086867
+[  322.946722] slave device ioctl
+[  322.946722] slave: 80000007B1087867
+[  322.946726] slave device ioctl
+[  322.946727] slave device ioctl
+[  322.946728] slave: F000FF53F000E9CC
+../data/file2_in
+Slave Transmission time: 0.394400 ms, File size: 577 bytes
+Master Transmission time: 0.445400 ms, File size: 577 bytes
+[  322.978375] R10: 000000000000053f R11: 0000000000000202 R12: 0000000000400860
+[  322.978376] R13: 00007ffee79cd620 R14: 0000000000000000 R15: 0000000000000000
+[  322.978378] Code: ff 8b 05 80 21 d8 00 65 8b 35 d9 b4 92 55 f7 d0 21 d0 23 11 09 f0 48 8d 14 91 3b 42 40 0f 84 22 ff ff ff 89 42 40 e9 1a ff ff ff <0f> 0b e9 31 ff ff ff 0f 0b e9 1e ff ff ff e8 e9 a2 7a ff 66 0f 
+[  322.978407] ---[ end trace 2a173bd8444c4450 ]---
+[  322.978414] aceept sockfd_cli = 0x00000000e24bef15
+[  322.979703] got connected from : 127.0.0.1 33714
+[  322.979774] master: 80000007B43F4025
+[  322.979871] master: 80000007B8D05025
+[  322.979923] slave device ioctl
+[  322.979924] slave: 80000007B7DC1867
+[  322.979925] slave device ioctl
+[  322.979925] slave: 80000007B325A867
+[  322.979930] slave device ioctl
+[  322.979931] slave device ioctl
+[  322.979932] slave: F000FF53F000FF53

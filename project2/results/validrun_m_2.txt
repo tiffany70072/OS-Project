@@ -1,0 +1,432 @@
+../data/400000.in
+Master Transmission time: 993.125300 ms, File size: 50000000 bytes
+Slave Transmission time: 996.501000 ms, File size: 50000000 bytes
+[  473.304097] slave device ioctl
+[  473.304120] slave device ioctl
+[  473.304121] slave: 80000006D1C14867
+[  473.304121] slave device ioctl
+[  473.304122] slave: 80000006D1C15867
+[  473.304122] slave device ioctl
+[  473.304123] slave: 80000006D1C16867
+[  473.304123] slave device ioctl
+[  473.304124] slave: 80000006D1C17867
+[  473.304128] slave device ioctl
+[  473.304138] slave device ioctl
+[  473.304138] slave: 80000006D1C18867
+[  473.304141] slave device ioctl
+[  473.304141] slave device ioctl
+[  473.304143] slave: F000FF53F000FF53
+../data/40.in
+Master Transmission time: 0.261200 ms, File size: 5000 bytes
+Slave Transmission time: 0.036600 ms, File size: 5000 bytes
+[  473.346547] slave: 80000007AD2A5867
+[  473.346548] slave device ioctl
+[  473.346548] slave: 80000007AD2A6867
+[  473.346549] slave device ioctl
+[  473.346549] slave: 80000007AD2A7867
+[  473.346550] slave device ioctl
+[  473.346550] slave: 8000000781567867
+[  473.346555] slave device ioctl
+[  473.346569] slave device ioctl
+[  473.346569] slave: 80000007AAB1E867
+[  473.346569] slave device ioctl
+[  473.346570] slave: 80000006F1D5B867
+[  473.346573] slave device ioctl
+[  473.346574] slave device ioctl
+[  473.346575] slave: F000FF53F000FF53
+../data/1000.in
+Master Transmission time: 0.201300 ms, File size: 125000 bytes
+Slave Transmission time: 0.231200 ms, File size: 125000 bytes
+[  473.373260] slave device ioctl
+[  473.373281] slave device ioctl
+[  473.373282] slave: 80000006D16F0867
+[  473.373282] slave device ioctl
+[  473.373283] slave: 80000006D16F1867
+[  473.373284] slave device ioctl
+[  473.373284] slave: 80000006D1760867
+[  473.373284] slave device ioctl
+[  473.373285] slave: 80000006D1761867
+[  473.373289] slave device ioctl
+[  473.373307] slave device ioctl
+[  473.373307] slave: 80000006D1782867
+[  473.373310] slave device ioctl
+[  473.373311] slave device ioctl
+[  473.373312] slave: F000FF53F000FF53
+../data/80.in
+Master Transmission time: 0.034200 ms, File size: 10000 bytes
+Slave Transmission time: 0.042800 ms, File size: 10000 bytes
+[  473.397285] slave: 80000007815CD867
+[  473.397285] slave device ioctl
+[  473.397286] slave: 80000007B3519867
+[  473.397289] slave device ioctl
+[  473.397310] slave device ioctl
+[  473.397310] slave: 8000000781550867
+[  473.397311] slave device ioctl
+[  473.397311] slave: 80000007815D0867
+[  473.397311] slave device ioctl
+[  473.397312] slave: 80000007B2410867
+[  473.397312] slave device ioctl
+[  473.397313] slave: 800000078154E867
+[  473.397316] slave device ioctl
+[  473.397317] slave device ioctl
+[  473.397318] slave: F000FF53F000E9CC
+../data/100.in
+Master Transmission time: 0.045700 ms, File size: 12500 bytes
+Slave Transmission time: 0.056700 ms, File size: 12500 bytes
+[  473.421203] slave device ioctl
+[  473.421225] slave device ioctl
+[  473.421225] slave: 80000007815F6867
+[  473.421226] slave device ioctl
+[  473.421226] slave: 80000007817D4867
+[  473.421227] slave device ioctl
+[  473.421227] slave: 80000007815D4867
+[  473.421227] slave device ioctl
+[  473.421228] slave: 80000007817D5867
+[  473.421232] slave device ioctl
+[  473.421243] slave device ioctl
+[  473.421243] slave: 8000000781548867
+[  473.421246] slave device ioctl
+[  473.421247] slave device ioctl
+[  473.421248] slave: F000FF53F000FF53
+../data/2000.in
+Master Transmission time: 0.338300 ms, File size: 250000 bytes
+Slave Transmission time: 0.682300 ms, File size: 250000 bytes
+[  473.455086] slave device ioctl
+[  473.455106] slave device ioctl
+[  473.455107] slave: 8000000781EFC867
+[  473.455107] slave device ioctl
+[  473.455108] slave: 8000000781EFD867
+[  473.455108] slave device ioctl
+[  473.455109] slave: 8000000781EFE867
+[  473.455109] slave device ioctl
+[  473.455109] slave: 8000000781EFF867
+[  473.455113] slave device ioctl
+[  473.455454] slave device ioctl
+[  473.455455] slave: 80000007813E0867
+[  473.455500] slave device ioctl
+[  473.455501] slave device ioctl
+[  473.455503] slave: F000FF53F000FF53
+../data/4000.in
+Master Transmission time: 1.740300 ms, File size: 500000 bytes
+Slave Transmission time: 1.768700 ms, File size: 500000 bytes
+[  473.498896] slave device ioctl
+[  473.498920] slave device ioctl
+[  473.498921] slave: 80000007812F6867
+[  473.498921] slave device ioctl
+[  473.498922] slave: 80000006D102D867
+[  473.498922] slave device ioctl
+[  473.498922] slave: 80000007812F4867
+[  473.498923] slave device ioctl
+[  473.498923] slave: 80000007812F5867
+[  473.498927] slave device ioctl
+[  473.498948] slave device ioctl
+[  473.498948] slave: 80000006D102E867
+[  473.498951] slave device ioctl
+[  473.498952] slave device ioctl
+[  473.498953] slave: F000FF53F000FF53
+../data/100000.in
+Master Transmission time: 23.248600 ms, File size: 12500000 bytes
+Slave Transmission time: 25.921000 ms, File size: 12500000 bytes
+[  473.782472] slave: 80000006D0191867
+[  473.782473] slave device ioctl
+[  473.782473] slave: 80000006D0192867
+[  473.782474] slave device ioctl
+[  473.782474] slave: 80000006D0193867
+[  473.782478] slave device ioctl
+[  473.782495] slave device ioctl
+[  473.782495] slave: 80000006D0194867
+[  473.782496] slave device ioctl
+[  473.782496] slave: 80000006D0195867
+[  473.782497] slave device ioctl
+[  473.782497] slave: 80000006D0196867
+[  473.782501] slave device ioctl
+[  473.782501] slave device ioctl
+[  473.782502] slave: F000FF53F000FF53
+../data/20000.in
+Master Transmission time: 3.499900 ms, File size: 2500000 bytes
+Slave Transmission time: 6.294700 ms, File size: 2500000 bytes
+[  473.872554] slave: 80000006CFE68867
+[  473.872556] slave device ioctl
+[  473.872559] slave: 80000006CFE69867
+[  473.872561] slave device ioctl
+[  473.872564] slave: 80000006CFE6A867
+[  473.872569] slave device ioctl
+[  473.872591] slave device ioctl
+[  473.872594] slave: 80000006CFE6B867
+[  473.872596] slave device ioctl
+[  473.872599] slave: 80000006CFE8B867
+[  473.872612] slave device ioctl
+[  473.872615] slave: 80000006CFE8C867
+[  473.872622] slave device ioctl
+[  473.872625] slave device ioctl
+[  473.872628] slave: F000FF53F000FF53
+../data/40000.in
+Master Transmission time: 12.303700 ms, File size: 5000000 bytes
+Slave Transmission time: 15.482300 ms, File size: 5000000 bytes
+[  474.053062] slave: 80000006CF38C867
+[  474.053063] slave device ioctl
+[  474.053063] slave: 80000006CF38D867
+[  474.053064] slave device ioctl
+[  474.053064] slave: 80000006CF38E867
+[  474.053065] slave device ioctl
+[  474.053066] slave: 80000006CF38F867
+[  474.053070] slave device ioctl
+[  474.053086] slave device ioctl
+[  474.053086] slave: 80000006CF390867
+[  474.053087] slave device ioctl
+[  474.053087] slave: 80000006CF391867
+[  474.053090] slave device ioctl
+[  474.053091] slave device ioctl
+[  474.053092] slave: F000FF53F000FF53
+../data/200.in
+Master Transmission time: 0.082500 ms, File size: 25000 bytes
+Slave Transmission time: 0.095000 ms, File size: 25000 bytes
+[  474.080492] slave device ioctl
+[  474.080524] slave device ioctl
+[  474.080525] slave: 800000076D470867
+[  474.080525] slave device ioctl
+[  474.080526] slave: 800000076D471867
+[  474.080526] slave device ioctl
+[  474.080527] slave: 800000076D472867
+[  474.080528] slave device ioctl
+[  474.080529] slave: 800000076D473867
+[  474.080535] slave device ioctl
+[  474.080564] slave device ioctl
+[  474.080564] slave: 800000076D474867
+[  474.080569] slave device ioctl
+[  474.080570] slave device ioctl
+[  474.080571] slave: F000FF53F000FF53
+../data/1.in
+Master Transmission time: 0.019700 ms, File size: 125 bytes
+Slave Transmission time: 0.028000 ms, File size: 125 bytes
+[  474.108071] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007f1be94d2f47
+[  474.108072] RDX: 00007ffcb9408fa0 RSI: 0000000012345677 RDI: 0000000000000003
+[  474.108073] RBP: 00007ffcb9409350 R08: 0000000000000002 R09: 00007ffcb94090c0
+[  474.108074] R10: 000000000000053f R11: 0000000000000206 R12: 0000000000400860
+[  474.108075] R13: 00007ffcb9409430 R14: 0000000000000000 R15: 0000000000000000
+[  474.108076] Code: ff 8b 05 80 21 d8 00 65 8b 35 d9 b4 92 55 f7 d0 21 d0 23 11 09 f0 48 8d 14 91 3b 42 40 0f 84 22 ff ff ff 89 42 40 e9 1a ff ff ff <0f> 0b e9 31 ff ff ff 0f 0b e9 1e ff ff ff e8 e9 a2 7a ff 66 0f 
+[  474.108105] ---[ end trace 2a173bd8444c44c0 ]---
+[  474.108106] aceept sockfd_cli = 0x000000002e47dfda
+[  474.108107] got connected from : 127.0.0.1 33938
+[  474.108135] master: 80000007B17AF025
+[  474.108171] slave device ioctl
+[  474.108171] slave: 80000007B1220867
+[  474.108176] slave device ioctl
+[  474.108177] slave device ioctl
+[  474.108179] slave: F000FF53F000FF53
+../data/400.in
+Master Transmission time: 0.086800 ms, File size: 50000 bytes
+Slave Transmission time: 0.347800 ms, File size: 50000 bytes
+[  474.137215] slave: 800000076D5AA867
+[  474.137215] slave device ioctl
+[  474.137216] slave: 800000076D5AB867
+[  474.137216] slave device ioctl
+[  474.137217] slave: 800000076D5AC867
+[  474.137217] slave device ioctl
+[  474.137218] slave: 80000006CFEA8867
+[  474.137222] slave device ioctl
+[  474.137249] slave device ioctl
+[  474.137250] slave: 80000006CFEDB867
+[  474.137250] slave device ioctl
+[  474.137251] slave: 80000006CFEDC867
+[  474.137255] slave device ioctl
+[  474.137256] slave device ioctl
+[  474.137258] slave: F000FF53F000FF53
+../data/4.in
+Master Transmission time: 0.032900 ms, File size: 500 bytes
+Slave Transmission time: 0.028100 ms, File size: 500 bytes
+[  474.167528] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007f9ee7b7ef47
+[  474.167529] RDX: 00007fffe25e75e0 RSI: 0000000012345677 RDI: 0000000000000003
+[  474.167530] RBP: 00007fffe25e7990 R08: 0000000000000002 R09: 00007fffe25e7700
+[  474.167530] R10: 000000000000053f R11: 0000000000000206 R12: 0000000000400860
+[  474.167531] R13: 00007fffe25e7a70 R14: 0000000000000000 R15: 0000000000000000
+[  474.167532] Code: ff 8b 05 80 21 d8 00 65 8b 35 d9 b4 92 55 f7 d0 21 d0 23 11 09 f0 48 8d 14 91 3b 42 40 0f 84 22 ff ff ff 89 42 40 e9 1a ff ff ff <0f> 0b e9 31 ff ff ff 0f 0b e9 1e ff ff ff e8 e9 a2 7a ff 66 0f 
+[  474.167565] ---[ end trace 2a173bd8444c44c2 ]---
+[  474.167566] aceept sockfd_cli = 0x000000006c0f224b
+[  474.167568] got connected from : 127.0.0.1 33942
+[  474.167603] master: 8000000781551025
+[  474.167646] slave device ioctl
+[  474.167648] slave: 8000000774A2D867
+[  474.167656] slave device ioctl
+[  474.167658] slave device ioctl
+[  474.167660] slave: F000FF53F000FF53
+../data/800000.in
+Master Transmission time: 2923.105900 ms, File size: 100000000 bytes
+Slave Transmission time: 2926.371000 ms, File size: 100000000 bytes
+[  476.456797] slave device ioctl
+[  476.456826] slave device ioctl
+[  476.456826] slave: 80000006C73C3867
+[  476.456827] slave device ioctl
+[  476.456827] slave: 80000006C73C4867
+[  476.456828] slave device ioctl
+[  476.456829] slave: 80000006C73C5867
+[  476.456829] slave device ioctl
+[  476.456830] slave: 80000006C73C6867
+[  476.456835] slave device ioctl
+[  476.456851] slave device ioctl
+[  476.456852] slave: 80000006C73C7867
+[  476.456855] slave device ioctl
+[  476.456856] slave device ioctl
+[  476.456857] slave: F000FF53F000FF53
+../data/8.in
+Master Transmission time: 0.017700 ms, File size: 1000 bytes
+Slave Transmission time: 4.568500 ms, File size: 1000 bytes
+[  476.539081] R10: 000000000000053f R11: 0000000000000206 R12: 0000000000400860
+[  476.539082] R13: 00007fff8bf15bd0 R14: 0000000000000000 R15: 0000000000000000
+[  476.539083] Code: ff 8b 05 80 21 d8 00 65 8b 35 d9 b4 92 55 f7 d0 21 d0 23 11 09 f0 48 8d 14 91 3b 42 40 0f 84 22 ff ff ff 89 42 40 e9 1a ff ff ff <0f> 0b e9 31 ff ff ff 0f 0b e9 1e ff ff ff e8 e9 a2 7a ff 66 0f 
+[  476.539105] ---[ end trace 2a173bd8444c44c4 ]---
+[  476.539107] aceept sockfd_cli = 0x00000000223912ed
+[  476.539108] got connected from : 127.0.0.1 33946
+[  476.539146] master: 800000076D5D8025
+[  476.539168] master: 800000076D518025
+[  476.540011] slave device ioctl
+[  476.540013] slave: 800000076D490867
+[  476.540014] slave device ioctl
+[  476.540014] slave: 800000076D4FC867
+[  476.540022] slave device ioctl
+[  476.540024] slave device ioctl
+[  476.540026] slave: F000FF53F000FF53
+../data/20.in
+Master Transmission time: 0.057200 ms, File size: 2500 bytes
+Slave Transmission time: 0.035500 ms, File size: 2500 bytes
+[  476.567605] master: 800000070C787025
+[  476.567628] slave device ioctl
+[  476.567629] slave: 800000076D5E3867
+[  476.567630] slave device ioctl
+[  476.567631] slave: 800000070C7BB867
+[  476.567631] slave device ioctl
+[  476.567632] slave: 800000076D497867
+[  476.567632] slave device ioctl
+[  476.567633] slave: 8000000780BBC867
+[  476.567640] slave device ioctl
+[  476.567658] slave device ioctl
+[  476.567659] slave: 80000007B1284867
+[  476.567663] slave device ioctl
+[  476.567664] slave device ioctl
+[  476.567665] slave: F000FF53F000FF53
+../data/10.in
+Master Transmission time: 0.079500 ms, File size: 1250 bytes
+Slave Transmission time: 0.027300 ms, File size: 1250 bytes
+[  476.595370] ---[ end trace 2a173bd8444c44c6 ]---
+[  476.595371] aceept sockfd_cli = 0x00000000917510d0
+[  476.595372] got connected from : 127.0.0.1 33950
+[  476.595401] master: 800000076D5E9025
+[  476.595415] master: 80000007B1E42025
+[  476.595429] master: 800000076D5F4025
+[  476.595466] slave device ioctl
+[  476.595467] slave: 800000076D550867
+[  476.595467] slave device ioctl
+[  476.595468] slave: 800000070C7E6867
+[  476.595468] slave device ioctl
+[  476.595469] slave: 800000077203B867
+[  476.595474] slave device ioctl
+[  476.595475] slave device ioctl
+[  476.595476] slave: F000FF53F000FF53
+../data/10000.in
+Master Transmission time: 1.969700 ms, File size: 1250000 bytes
+Slave Transmission time: 2.786000 ms, File size: 1250000 bytes
+[  476.652942] slave: 80000006C6D1E867
+[  476.652942] slave device ioctl
+[  476.652943] slave: 80000006C6D1F867
+[  476.652943] slave device ioctl
+[  476.652944] slave: 80000006C6D20867
+[  476.652944] slave device ioctl
+[  476.652945] slave: 80000006C6D21867
+[  476.652949] slave device ioctl
+[  476.652988] slave device ioctl
+[  476.652989] slave: 80000006C6D22867
+[  476.652990] slave device ioctl
+[  476.652990] slave: 80000006C6D23867
+[  476.652994] slave device ioctl
+[  476.652995] slave device ioctl
+[  476.652996] slave: F000FF53F000FF53
+../data/8000.in
+Master Transmission time: 2.379300 ms, File size: 1000000 bytes
+Slave Transmission time: 4.000300 ms, File size: 1000000 bytes
+[  476.728959] slave: 800000070A75B867
+[  476.728959] slave device ioctl
+[  476.728960] slave: 800000070A75C867
+[  476.728960] slave device ioctl
+[  476.728961] slave: 800000070A75D867
+[  476.728961] slave device ioctl
+[  476.728962] slave: 800000070A75E867
+[  476.728966] slave device ioctl
+[  476.728986] slave device ioctl
+[  476.728986] slave: 800000070A75F867
+[  476.728987] slave device ioctl
+[  476.728987] slave: 800000070A790867
+[  476.728992] slave device ioctl
+[  476.728993] slave device ioctl
+[  476.728995] slave: F000FF53F000FF53
+../data/2.in
+Master Transmission time: 0.134500 ms, File size: 250 bytes
+Slave Transmission time: 0.048300 ms, File size: 250 bytes
+[  476.755874] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007f55c159af47
+[  476.755874] RDX: 00007ffcf7ce2f40 RSI: 0000000012345677 RDI: 0000000000000003
+[  476.755875] RBP: 00007ffcf7ce32f0 R08: 0000000000000002 R09: 00007ffcf7ce3060
+[  476.755876] R10: 000000000000053f R11: 0000000000000206 R12: 0000000000400860
+[  476.755876] R13: 00007ffcf7ce33d0 R14: 0000000000000000 R15: 0000000000000000
+[  476.755877] Code: ff 8b 05 80 21 d8 00 65 8b 35 d9 b4 92 55 f7 d0 21 d0 23 11 09 f0 48 8d 14 91 3b 42 40 0f 84 22 ff ff ff 89 42 40 e9 1a ff ff ff <0f> 0b e9 31 ff ff ff 0f 0b e9 1e ff ff ff e8 e9 a2 7a ff 66 0f 
+[  476.755901] ---[ end trace 2a173bd8444c44c9 ]---
+[  476.755902] aceept sockfd_cli = 0x000000003901527c
+[  476.755903] got connected from : 127.0.0.1 33956
+[  476.755929] master: 800000070B2B6025
+[  476.755963] slave device ioctl
+[  476.755964] slave: 800000070C77A867
+[  476.756020] slave device ioctl
+[  476.756022] slave device ioctl
+[  476.756023] slave: F000FF53F000FF53
+../data/200000.in
+Master Transmission time: 51.613100 ms, File size: 25000000 bytes
+Slave Transmission time: 954.422200 ms, File size: 25000000 bytes
+[  477.356538] slave device ioctl
+[  477.356562] slave device ioctl
+[  477.356564] slave: 80000006C447C867
+[  477.356566] slave device ioctl
+[  477.356569] slave: 80000006C447D867
+[  477.356571] slave device ioctl
+[  477.356573] slave: 80000006C447E867
+[  477.356575] slave device ioctl
+[  477.356578] slave: 80000006C447F867
+[  477.356583] slave device ioctl
+[  477.356596] slave device ioctl
+[  477.356596] slave: 80000006C4480867
+[  477.356599] slave device ioctl
+[  477.356600] slave device ioctl
+[  477.356601] slave: F000FF53F000FF53
+../data/800.in
+Master Transmission time: 0.164100 ms, File size: 100000 bytes
+Slave Transmission time: 0.539600 ms, File size: 100000 bytes
+[  477.387847] slave: 80000006C3CB7867
+[  477.387847] slave device ioctl
+[  477.387848] slave: 80000006C3CB8867
+[  477.387853] slave device ioctl
+[  477.387896] slave device ioctl
+[  477.387897] slave: 80000006C3CB9867
+[  477.387898] slave device ioctl
+[  477.387899] slave: 80000006C3CBA867
+[  477.387899] slave device ioctl
+[  477.387900] slave: 80000006C3CBB867
+[  477.387900] slave device ioctl
+[  477.387901] slave: 80000006C3CBC867
+[  477.387906] slave device ioctl
+[  477.387907] slave device ioctl
+[  477.387909] slave: F000FF53F000E9CC
+../data/80000.in
+Master Transmission time: 19.847000 ms, File size: 10000000 bytes
+Slave Transmission time: 23.070800 ms, File size: 10000000 bytes
+[  477.642966] slave: 80000006C3490867
+[  477.642966] slave device ioctl
+[  477.642967] slave: 80000006C3491867
+[  477.642972] slave device ioctl
+[  477.643005] slave device ioctl
+[  477.643005] slave: 80000006C3492867
+[  477.643006] slave device ioctl
+[  477.643007] slave: 80000006C3493867
+[  477.643007] slave device ioctl
+[  477.643008] slave: 80000006C3494867
+[  477.643008] slave device ioctl
+[  477.643009] slave: 80000006C3495867
+[  477.643014] slave device ioctl
+[  477.643015] slave device ioctl
+[  477.643017] slave: F000FF53F000E9CC
