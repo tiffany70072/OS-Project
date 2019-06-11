@@ -59,6 +59,7 @@ static mm_segment_t old_fs;
 static ksocket_t sockfd_cli;//socket to the master server
 static struct sockaddr_in addr_srv; //address of the master server
 
+
 void mmap_open(struct vm_area_struct *vma)
 {
 }
@@ -66,9 +67,10 @@ void mmap_close(struct vm_area_struct *vma)
 {
 }
 
+
 static const struct vm_operations_struct my_vm_ops = {
     .open = mmap_open,
-    .close = mmap_close,
+    .close = mmap_close
 };
 
 static int my_mmap(struct file *file, struct vm_area_struct *vma)
@@ -91,7 +93,7 @@ static struct file_operations slave_fops = {
 	.open = slave_open,
 	.read = receive_msg,
 	.release = slave_close,
-    	.mmap = my_mmap
+    .mmap = my_mmap
 };
 
 //device info
