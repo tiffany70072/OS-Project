@@ -59,24 +59,15 @@ static int addr_len;
 //static  struct mmap_info *mmap_msg; // pointer to the mapped data in this device
 void mmap_open(struct vm_area_struct *vma)
 {
-	// don't do anything
 }
 void mmap_close(struct vm_area_struct *vma)
 {
-	// don't do anything
 }
 
-int mmap_fault(struct vm_area_struct *vma, struct vm_fault *vmf)
-{
-	vmf->page = virt_to_page(vma->vm_private_data);
-	get_page(vmf->page);
-	return 0;
-}
 
 static const struct vm_operations_struct my_vm_ops = {
 	.open = mmap_open,
 	.close = mmap_close,
-	//.fault = mmap_fault
 };
 
 static int my_mmap(struct file *file, struct vm_area_struct *vma)
