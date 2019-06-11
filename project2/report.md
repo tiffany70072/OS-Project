@@ -1,6 +1,72 @@
 # Operating System Project 2 Report
 ## 1. Programming design
 
+### 題目要求
+* 本次目標是在兩個 users 之間傳輸資料，並比較 file I/O (read and write) 和 mmap 兩種傳輸方式的差異
+* 在 master 端的 user1 將資料傳送給在 slave 端的 user2，資料傳送的過程需經過：master program -> master device -> user device -> user program
+### mmap 作法
+* 利用虛擬地址直接存取檔案
+* Kernel 版本 = 4.15.0
+#### Master
+* master 端是傳送端，因此他已事先知道檔案的大小，能直接把整個檔案映射到虛擬位址上，讓 master device 直接透過映射位址讀取檔案內容。這個方法可以省去原本 file I/O 需要的 buffer，因此可以少一次搬移資料的時間，但是建立 mmap 本身有 overhead
+* 需要配合 3 個 kernel functions
+
+|socket id | socket name| function|
+|----------|------------|---------|
+|0x12345677|master_IOCTL_CREATESOCK|create socket and accept a connection|
+|0x12345678|master_IOCTL_MMAP|execute MMAP: write data
+|0x12345679|master_IOCTL_EXIT|exit the socket
+
+#### Slave
+* 由於slave端事先不知道檔案大小，因此映射時需要先開啟一給定的大小（通常是 page size 的整數倍)，如果滿了就在開新的，直到檔案傳完為止
+* 但檔案本身原本是空的，如果直接把開啟的檔案拿來映射，會導致 bus error。因此每次要開新的映射位址時，需要先在該檔案的對應 offset 位置寫入一個 null character。並於檔案傳送完畢後將多出來的 offset truncate掉
+* 需要設定 IP 位址
+* 需要配合 2 個 kernel functions
+
+|socket id | socket name| function|
+|----------|------------|---------|
+|0x12345677|slave_IOCTL_CREATESOCK|create socket and accept a connection|
+|0x12345678|slave_IOCTL_MMAP|execute MMAP: receive data and return received data
+|0x12345679|slave_IOCTL_EXIT|exit the socket
+
+#### Structure
+![](https://github.com/tiffany70072/OS-Project/blob/master/project2/graph/structure.png?raw=true)
+
+
+### 程式架構
+ 
+```
+./ksocket: 
+    the device module including the functions used for kernel socket
+    BSD-style socket APIs
+./master_device : the device module for master server
+./slave_device  : the device module for slave client
+./user_program : including user program "master" and "slave"
+```
+
+### 執行方式
+Compile
+```
+$ sudo su
+$ bash compile.sh
+$ bash createDummyFiles.sh
+```
+Run
+```
+$ cd user_program
+$ bash testrun.sh f > ../results/testrun_f_1.txt
+$ bash testrun.sh f > ../results/testrun_f_2.txt
+$ bash testrun.sh f > ../results/testrun_f_3.txt
+$ bash testrun.sh f > ../results/testrun_f_4.txt
+$ bash testrun.sh f > ../results/testrun_f_5.txt
+$ bash testrun.sh m > ../results/testrun_m_1.txt
+$ bash testrun.sh m > ../results/testrun_m_2.txt
+$ bash testrun.sh m > ../results/testrun_m_3.txt
+$ bash testrun.sh m > ../results/testrun_m_4.txt
+$ bash testrun.sh m > ../results/testrun_m_5.txt
+```
+
+
 
 
 ## 2. The Result
