@@ -3,7 +3,8 @@
 
 ### 題目要求
 * 本次目標是在兩個 users 之間傳輸資料，並比較 file I/O (read and write) 和 mmap 兩種傳輸方式的差異
-* 在 master 端的 user1 將資料傳送給在 slave 端的 user2，資料傳送的過程需經過：master program -> master device -> user device -> user program
+* 在 master 端的 user1 將資料傳送給在 slave 端的 user2
+* 資料傳送的過程需經過：master program -> master device -> user device -> user program
 ### mmap 作法
 * 利用虛擬地址直接存取檔案
 * Kernel 版本 = 4.15.0
