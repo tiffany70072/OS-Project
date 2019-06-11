@@ -1,4 +1,4 @@
-for FILE in `find ../data -name *_in`
+for FILE in `find ../data -name *.in`
 do
 	echo $FILE
 	sudo ./master $FILE $1 &
