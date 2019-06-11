@@ -9,7 +9,7 @@
 * 利用虛擬地址直接存取檔案
 * Kernel 版本 = 4.15.0
 #### Master
-* master 端是傳送端，因此他已事先知道檔案的大小，能直接把整個檔案映射到虛擬位址上，讓 master device 直接透過映射位址讀取檔案內容。這個方法可以省去原本 file I/O 需要的 buffer，因此可以少一次搬移資料的時間，但是建立 mmap 本身有 overhead
+* Master 端是傳送端，因此他已事先知道檔案的大小，能直接把整個檔案映射到虛擬位址上，讓 master device 直接透過映射位址讀取檔案內容。這個方法可以省去原本 file I/O 需要的 buffer，因此可以少一次搬移資料的時間，但是建立 mmap 本身有 overhead
 * 需要配合 3 個 kernel functions
 
 |socket id | socket name| function|
@@ -19,7 +19,7 @@
 |0x12345679|master_IOCTL_EXIT|exit the socket
 
 #### Slave
-* 由於slave端事先不知道檔案大小，因此映射時需要先開啟一給定的大小（通常是 page size 的整數倍)，如果滿了就在開新的，直到檔案傳完為止
+* 由於 slave 端事先不知道檔案大小，因此映射時需要先開啟一給定的大小（通常是 page size 的整數倍)，如果滿了就在開新的，直到檔案傳完為止
 * 但檔案本身原本是空的，如果直接把開啟的檔案拿來映射，會導致 bus error。因此每次要開新的映射位址時，需要先在該檔案的對應 offset 位置寫入一個 null character。並於檔案傳送完畢後將多出來的 offset truncate掉
 * 需要設定 IP 位址
 * 需要配合 2 個 kernel functions
