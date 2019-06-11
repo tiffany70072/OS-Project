@@ -1,39 +1,34 @@
-# OS Project 2 2018
+# OS 2019 Project 2
 
-This is the source code of operating system project2.
-
-```
-./master_device : the device moudule for master server
-./slave_device  : the device moudule for slave client
-./ksocket: the device moudule including the funtions used for kernel socket
-./data   : input/output data
-./user_program : the user program "master" and "slave"
-```
-
-## How to Run
-
-```
-sh compile.sh
-sh exec.sh
-```
-
-## Analyze Steps:
-
-make dummy data:
-
+## Compile and Create Dummy Files
 ```bash
-bash createDummyFiles.sh 
+$ sudo su
+$ bash compile.sh
+$ bash createDummyFiles.sh
 ```
 
-files will be created in `/data`
-
-Comment `#difine DUBUG` in `master.c` and `slave.c`
-
+## Run Test
+```bash
+$ cd user_program
+$ bash testrun.sh f > ../results/testrun_f_1.txt
+$ bash testrun.sh f > ../results/testrun_f_2.txt
+$ bash testrun.sh f > ../results/testrun_f_3.txt
+$ bash testrun.sh f > ../results/testrun_f_4.txt
+$ bash testrun.sh f > ../results/testrun_f_5.txt
+$ bash testrun.sh m > ../results/testrun_m_1.txt
+$ bash testrun.sh m > ../results/testrun_m_2.txt
+$ bash testrun.sh m > ../results/testrun_m_3.txt
+$ bash testrun.sh m > ../results/testrun_m_4.txt
+$ bash testrun.sh m > ../results/testrun_m_5.txt
 ```
-sh exec.sh
-```
 
-the output format:
-```
- trans_time, file_size, method
+## Run Valid
+```bash
+$ cd user_program
+$ bash validrun.sh f > ../results/validrun_f_1.txt
+$ bash validrun.sh f > ../results/validrun_f_2.txt
+$ bash validrun.sh f > ../results/validrun_f_3.txt
+$ bash validrun.sh m > ../results/validrun_m_1.txt
+$ bash validrun.sh m > ../results/validrun_m_2.txt
+$ bash validrun.sh m > ../results/validrun_m_3.txt
 ```
